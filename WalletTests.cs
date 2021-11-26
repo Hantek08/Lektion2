@@ -66,7 +66,7 @@ namespace Lektion2.UnitTests
         }
 
         [Fact]
-        public void RemoveAll_WhenCalled_RemovesAllTheMoneyFromTheWallet()
+        public void RemoveAll_WhenCalled_RemovesAllMoneyFromTheWallet()
         {
             //Arrange
             var wallet = new Wallet(new Kronor(10, 0));
