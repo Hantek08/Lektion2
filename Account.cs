@@ -53,8 +53,6 @@ namespace Lektion2
                 throw new ArgumentException("Insufficient balance");
             }  
             amount = amount.Subtract(money);
-            
-           
         }
 
         /*
