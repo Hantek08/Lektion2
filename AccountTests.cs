@@ -7,7 +7,7 @@ namespace Lektion2.UnitTests
    public class AccountTests
     {
         [Fact]
-        public void Account_ChecksIfAmountIsEmpty()
+        public void Account_ChecksIfAccountIsEmpty()
         {
             var account = new Account();
             Assert.True(account.Amount.IsZero());
@@ -15,7 +15,7 @@ namespace Lektion2.UnitTests
         }
 
         [Fact]
-        public void Deposit_CheckIfMoneyIsAdded()
+        public void Deposit_ChecksIfMoneyIsAdded()
         {
             var account = new Account();
             account.Amount = new Kronor(5, 0);
@@ -31,7 +31,7 @@ namespace Lektion2.UnitTests
         }
 
         [Fact]
-        public void Withdraw_WhenAccountIsPosetive_OrInAccountMore90Persont()
+        public void Withdraw_SufficientBalance_ReturnValue()
         {
             var account = new Account();
            account.Amount = new Kronor(9,0);
@@ -47,7 +47,7 @@ namespace Lektion2.UnitTests
         }
 
         [Fact]
-        public void Withdraw_WhenMoneyLessThan90_ReturnExeption()
+        public void Withdraw_NotSufficientBalance_ReturnExeption()
         {
             //Arrange
             var account = new Account();
@@ -63,7 +63,7 @@ namespace Lektion2.UnitTests
         }
 
         [Fact]
-        public void RemoveAll_WhenCalled_RemovesAllTheMoneyFromAccount()
+        public void RemoveAll_WhenCalled_RemovesAllMoneyFromAccount()
         {
             //Arrange
             var account = new Account(new Kronor(10, 0));
