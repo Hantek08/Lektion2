@@ -9,7 +9,7 @@ namespace Lektion2.UnitTests
    
 
         [Fact]//tells xUnit that this is a test. 
-        public void KronorPart_WhenCalled_ReturnsTheKronorPartOfTheKronor()
+        public void KronorPart_ReturnsTheKronorPartOfTheKronor()
         {
             //arrange
             Kronor myKronor = new Kronor(4, 0);
@@ -21,13 +21,13 @@ namespace Lektion2.UnitTests
             Assert.Equal(4, actualValue);
         }
         [Fact]//tells xUnit that this is a test. 
-        public void ÖrenPart_WhenCalled_ReturnsTheÖrenPartOfTheKronor()
+        public void Ã–renPart_ReturnsTheÃ–renPartOfTheKronor()
         {
             //arrange
             Kronor myKronor = new Kronor(1, 4);
 
             //act
-            var actualValue = myKronor.ÖrenPart();
+            var actualValue = myKronor.Ã–renPart();
 
             //assert
             Assert.Equal(4, actualValue);
@@ -70,13 +70,13 @@ namespace Lektion2.UnitTests
             //act
             var actualValue = myKronor.Add(new Kronor(2, 0));
             var kronePart = actualValue.KronorPart();
-            var örenPart = actualValue.ÖrenPart();
+            var Ã¶renPart = actualValue.Ã–renPart();
 
             //assert
 
             Assert.IsType<Kronor>(actualValue);
             Assert.Equal(6, kronePart);
-            Assert.Equal(0, örenPart);
+            Assert.Equal(0, Ã¶renPart);
         }
 
 
@@ -102,12 +102,12 @@ namespace Lektion2.UnitTests
             //act
             var actualValue = myKronor.Subtract(new Kronor(2, 0));
             var kronePart = actualValue.KronorPart();
-            var örenPart = actualValue.ÖrenPart();
+            var Ã¶renPart = actualValue.Ã–renPart();
 
             //assert
             Assert.IsType<Kronor>(actualValue);
             Assert.Equal(2, kronePart);
-           Assert.Equal(0, örenPart);
+           Assert.Equal(0, Ã¶renPart);
         }
 
         
