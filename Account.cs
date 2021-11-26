@@ -71,10 +71,8 @@ namespace Lektion2
         public static void Transfer(Account from, Account to, Kronor amount)
         {
                 from.Withdraw(amount);
-                
-                 to.Deposit(amount);
+                to.Deposit(amount);
 
-            //to.Deposit(to.amount);  // to = 13 from = 0
             
         }
     }
